@@ -1,0 +1,18 @@
+extends layout
+
+block scripts
+  script(src="/javascripts/todo.js", defer) 
+
+block content
+  div(id="todoHeader", class="header")
+    h2 TODO List
+    input(type="text", id="todoInput", placeholder="Title...")
+    span(onclick="newTodoElement()", class="addBtn") Add
+
+  ul(id="todoList")
+    li Hit the gym
+    li(class="checked") Pay bills 
+    li Meet George 
+    li Buy eggs 
+    li Read a book 
+    li Organize office
