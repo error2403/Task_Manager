@@ -1,12 +1,28 @@
 doctype html
-html(lang="en")
+html(lang="en-US")
   head
-    title= title
     meta(charset="utf-8")
-    link(rel="stylesheet", href="/stylesheets/style.css")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    title=title
+    link(rel="stylesheet", href="/stylesheets/style.css")
 
     block scripts
 
   body
+
+    // create page header
+    header
+      div(class="title_div")
+        h1 #[span(style="color:var(--primary)") Task] Manager
+
+      div(class="spacer_div")
+
+      div(class="date_div")
+        h3 Tusday
+        h3 #[span(style="color:var(--primary)") 20/06/2023]
+
+    // aside goes here
+
+    // main page content  
     block content
