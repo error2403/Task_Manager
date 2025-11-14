@@ -28,6 +28,10 @@ body {
   margin: 0 0;
 }
 
+main {
+  display: flex;
+}
+
 
 /* || typography || */
 h1, h2, h3 {

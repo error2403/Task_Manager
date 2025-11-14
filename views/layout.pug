@@ -22,29 +22,33 @@ html(lang="en-US")
         h3 Tusday
         h3 #[span(style="color:var(--primary)") 20/06/2023]
 
-    // aside goes here
-    aside
-      nav(class="page_nav")
-        ul 
-          li 
-            img(class="nav_icon", src="assets/screen.svg")
-            a(href="#") Dashboard
 
-          li 
-            img(class="nav_icon", src="assets/screen.svg")
-            a(href="#") Priority Tasks
+    // main content
+    main
+      // aside goes here
+      aside
+        nav(class="page_nav")
+          ul 
+            li 
+              img(class="nav_icon", src="assets/screen.svg")
+              a(href="#") Dashboard
 
-          li 
-            img(class="nav_icon", src="assets/screen.svg")
-            a(href="#") Task List
+            li 
+              img(class="nav_icon", src="assets/screen.svg")
+              a(href="#") Priority Tasks
 
-          li 
-            img(class="nav_icon", src="assets/screen.svg")
-            a(href="#") Projects 
+            li 
+              img(class="nav_icon", src="assets/screen.svg")
+              a(href="#") Task List
 
-          li 
-            img(class="nav_icon", src="assets/screen.svg")
-            a(href="#") Events
+            li 
+              img(class="nav_icon", src="assets/screen.svg")
+              a(href="#") Projects 
 
-    // main page content  
-    block content
+            li 
+              img(class="nav_icon", src="assets/screen.svg")
+              a(href="#") Events
+
+      // main page content
+      div(class="main_content")  
+        block content
