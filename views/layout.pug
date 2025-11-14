@@ -10,24 +10,22 @@ html(lang="en-US")
     block scripts
 
   body
-
     // create page header
     header
-      div(class="title_div")
+      div(id="title_div")
         h1 #[span(style="color:var(--primary)") Task] Manager
 
       div(class="spacer_div")
 
-      div(class="date_div")
-        h3 Tusday
+      div(id="date_div")
+        h3 Tuesday
         h3 #[span(style="color:var(--primary)") 20/06/2023]
-
 
     // main content
     main
       // aside goes here
       aside
-        nav(class="page_nav")
+        nav(id="page_nav")
           ul 
             li 
               img(class="nav_icon", src="assets/screen.svg")
