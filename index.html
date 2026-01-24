@@ -63,10 +63,20 @@
             </aside>
 
             <div class="main_content">
-                <!--main content-->
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam velit suscipit aperiam ipsum temporibus, id distinctio tenetur repudiandae sunt laudantium, sit corrupti assumenda atque dolores rem quae totam consequatur!</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam velit suscipit aperiam ipsum temporibus, id distinctio tenetur repudiandae sunt laudantium, sit corrupti assumenda atque dolores rem quae totam consequatur!</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam velit suscipit aperiam ipsum temporibus, id distinctio tenetur repudiandae sunt laudantium, sit corrupti assumenda atque dolores rem quae totam consequatur!</p>
+                <div id="todoHeader" class="header">
+                    <h2> TODO List</h2>
+                    <input type="text", id="todoInput", placeholder="Title...">
+                    <span onclick="newTodoElement()", class="addBtn">Add</span>
+                </div>
+
+                <ul id="todoList">
+                    <!--create base tasks-->
+                    <li>Get dressed</li>
+                    <li>Eat food</li> 
+                    <li>Brush teeth</li> 
+                    <li>Clean room</li>
+                    <li>Fold laundry</li>
+                </ul>
             </div>
         </main>
     </body>
