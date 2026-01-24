@@ -19,7 +19,7 @@
         <!-- main header, showing "title" & "date" at the top of the screen-->
         <header>
             <div class="title_div">
-                <h1>Task Manager</h1>
+                <h1><span style="color:var(--primary)">Task</span> Manager</h1>
             </div>
 
             <div class="spacer_div">
@@ -28,7 +28,7 @@
 
             <div class="date_div">
                 <h3>Tuesday</h3>
-                <h3>20/06/2023</h3>
+                <h3 style="color:var(--primary)">20/06/2023</h3>
             </div>
         </header>  
 
@@ -63,7 +63,7 @@
             </aside>
 
             <div class="main_content">
-                <div id="todoHeader" class="header">
+                <div id="todoHeader">
                     <h2> TODO List</h2>
                     <input type="text", id="todoInput", placeholder="Title...">
                     <span onclick="newTodoElement()", class="addBtn">Add</span>
@@ -74,8 +74,8 @@
                     <li>Get dressed</li>
                     <li>Eat food</li> 
                     <li>Brush teeth</li> 
-                    <li>Clean room</li>
-                    <li>Fold laundry</li>
+                    <li class="checked">Clean room</li>
+                    <li class="checked">Fold laundry</li>
                 </ul>
             </div>
         </main>
