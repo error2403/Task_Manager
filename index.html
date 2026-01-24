@@ -2,83 +2,30 @@
 <html lang="en-US">
     <!--where meta data is stored & external references are set-->
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <title>Task Manager</title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-            rel="stylesheet" />
-        <link
-            href="style.css" 
-            rel="stylesheet" />
+        <link href="style.css" rel="stylesheet"/>
         <script src="todo.js" defer></script>
     </head>
 
     <!--body containing all data displayed on page-->
     <body>
-        <!-- main header, showing "title" & "date" at the top of the screen-->
-        <header>
-            <div class="title_div">
-                <h1><span style="color:var(--primary)">Task</span> Manager</h1>
-            </div>
+        <!--header, including page title & input section-->
+        <div id="todoHeader" class="header">
+            <h2>TODO List</h2>
+            <input type="text" id="todoInput" placeholder="Title...">
+            <span onclick="newTodoElement()" class="addBtn">Add</span> 
+        </div>
 
-            <div class="spacer_div">
-
-            </div>
-
-            <div class="date_div">
-                <h3>Tuesday</h3>
-                <h3 style="color:var(--primary)">20/06/2023</h3>
-            </div>
-        </header>  
-
-        <!--main page data, displayed below header-->
-        <main>
-            <!--nav bar on left side-->
-            <aside>
-                <nav class="page_nav">
-                    <ul>
-                        <li>
-                            <img class="nav_icon"></img>
-                            <a href="#">Dashboard</a>
-                        </li>
-                        <li>
-                            <img class="nav_icon"></img>
-                            <a href="#">Priority Tasks</a>
-                        </li>
-                        <li>
-                            <img class="nav_icon"></img>
-                            <a href="#">Task List</a>
-                        </li>
-                        <li>
-                            <img class="nav_icon"></img>
-                            <a href="#">Projects</a>
-                        </li>
-                        <li>
-                            <img class="nav_icon"></img>
-                            <a href="#">Events</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <div class="main_content">
-                <div id="todoHeader">
-                    <h2> TODO List</h2>
-                    <input type="text", id="todoInput", placeholder="Title...">
-                    <span onclick="newTodoElement()", class="addBtn">Add</span>
-                </div>
-
-                <ul id="todoList">
-                    <!--create base tasks-->
-                    <li>Get dressed</li>
-                    <li>Eat food</li> 
-                    <li>Brush teeth</li> 
-                    <li class="checked">Clean room</li>
-                    <li class="checked">Fold laundry</li>
-                </ul>
-            </div>
-        </main>
+        <!--list that displays TODO items-->
+        <ul id="todoList">
+                <li>Get dressed</li>
+                <li>Eat food</li>
+                <li>Brush teeth</li>
+                <li class="checked">Clean room</li>
+                <li class="checked">Fold laundry</li>
+        </ul>
     </body>
 </html>

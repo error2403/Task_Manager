@@ -1,150 +1,22 @@
-/* || global variables || */
-:root {
-  /* color scheme */
-    --bg: #d1d1d1;
-    --primary: #34abeb;
-    --secondary: #7e7e7e;
-    --tertiary: white;
-
-    --text: #2a2a2a;
-    --text--alt: white;
-}
-
-
-/* || General setup || */
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 12px;
-  background-color: var(--bg);
-}
-
 body {
-  margin: 0 0;
-}
-
-main {
-  display: flex;
-}
-
-
-/* || typography || */
-h1, h2, h3 {
-  color: var(--text);
-}
-
-h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  text-shadow: 2px 2px 10px black;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-
-/* || header layout || */
-header {
-  background-color: var(--secondary);
-  height: 100px;
-  margin-bottom: 60px;
-  display: flex;
-}
-
-.title_div {
-  align-self: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-alt);
-  width: 300px;
-}
-.title_div h1 {
-  color: var(--text--alt);
-}
-
-.spacer_div {
-  flex: auto;
-}
-
-.date_div {
-  align-self: right;
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 1px 1px 5px black;
-}
-.date_div h3 {
-  color: var(--text--alt);
   margin: 0;
+  min-width: 250px;
+  background: #888;
 }
 
-
-/* || aside layout || */
-aside {
-  width: 300px;
-  border-radius: 10px;
-  align-items: center;
-  background-color: var(--primary);
-
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
 }
 
-.page_nav ul {
-  list-style: none;
-  font-size: 2rem;
-  margin: 0;
-  padding: 25px;
-}
-
-.page_nav li {
-  background-color: var(--secondary);
-  border-radius: 10px;
-  margin-top: 25px;
-
-  display: flex;
-  align-items: center;
-}
-
-.nav_icon {
-  height: 50px;
-  width: auto;
-}
-
-/* || TODO layout || */
-
-/* Style the header */
-#todoHeader {
-  background-color: #0279da;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-/* Clear floats after the header */
-#todoHeader:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#todoList {
+/* Remove margins and padding from the list */
+ul {
   margin: 0;
   padding: 0;
 }
 
-#todoList li {
+/* Style the list items */
+ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -157,28 +29,28 @@ aside {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;  
+  user-select: none;
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-#todoList li:nth-child(odd) {
+ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-#todoList li:hover {
+ul li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-#todoList li.checked {
+ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-#todoList li.checked::before {
+ul li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -191,10 +63,12 @@ aside {
   width: 7px;
 }
 
+/* Style the close button */
 .close {
   position: absolute;
   right: 0;
   top: 0;
+  padding: 12px 16px 12px 16px;
 }
 
 .close:hover {
@@ -202,6 +76,22 @@ aside {
   color: white;
 }
 
+/* Style the header */
+.header {
+  background-color: #0279da;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
 input {
   margin: 0;
   border: none;
@@ -212,6 +102,7 @@ input {
   font-size: 16px;
 }
 
+/* Style the "Add" button */
 .addBtn {
   padding: 10px;
   width: 25%;
