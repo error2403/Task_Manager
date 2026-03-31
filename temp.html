@@ -7,6 +7,7 @@
 
         <title>Task Manager</title>
         <link href="temp.css" rel="stylesheet"/>
+        <script src="date.js" defer></script>
     </head>
 
 <body>
@@ -14,10 +15,13 @@
   <div class="app">
     <!-- TITLE HEADER -->
     <header id="titleHeader" class="header">
-        <h1>TODO Manager</h1> 
-        <div id="date">
-            <span>Monday</span>
-            <span>3/30/2026</span>
+        <h1>
+            <span class="accentText">Task</span>
+            Manager
+        </h1> 
+        <div>
+            <h3 id="weekday">day</h3>
+            <p id="date" class="accentText">date</p>
         </div>
     </header>
 
