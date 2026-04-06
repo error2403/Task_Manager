@@ -14,14 +14,14 @@ for (i = 0; i < myNodelist.length; i++) {
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
+    close[i].onclick = function () {
         var div = this.parentElement;
         div.style.display = "none";
     }
 }
 
 // Add a "checked" symbol when clicking on a list item
-taskListElement.addEventListener('click', function(ev) {
+taskListElement.addEventListener('click', function (ev) {
     if (ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
     }
@@ -47,7 +47,7 @@ function newTaskElement() {
     li.appendChild(span);
 
     for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
+        close[i].onclick = function () {
             var div = this.parentElement;
             div.style.display = "none";
         }
