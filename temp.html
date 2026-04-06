@@ -9,6 +9,7 @@
         <link href="temp.css" rel="stylesheet"/>
         <script src="date.js" defer></script>
         <script src="sidebar.js" defer></script>
+        <script src="todo.js" defer></script>
     </head>
 
 <body>
@@ -53,15 +54,24 @@
 
       <!-- Main Content -->
       <main class="main">
-        <div class="cards">
-            <div class="card">To-Do</div>
-            <div class="card">Task Status</div>
-            <div class="card">Completed</div>
+        <!--header, including page title & input section-->
+        <div id="taskHeader" class="header">
+          <h2>Task List</h2>
+          <input type="text" id="taskInput" placeholder="Title...">
+          <span onclick="newTaskElement()" class="addBtn">Add</span> 
         </div>
+
+        <!--list that displays TODO items-->
+        <ul id="taskList">
+                <li>Get dressed</li>
+                <li>Eat food</li>
+                <li>Brush teeth</li>
+                <li class="checked">Clean room</li>
+                <li class="checked">Fold laundry</li>
+        </ul>
       </main>
 
     </div>
-
   </div>
 
 </body>
