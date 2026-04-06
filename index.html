@@ -1,31 +1,79 @@
 <!doctype html>
 <html lang="en-US">
-    <!--where meta data is stored & external references are set-->
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--where meta data is stored & external references are set-->
 
-        <title>Task Manager</title>
-        <link href="style.css" rel="stylesheet"/>
-        <script src="todo.js" defer></script>
-    </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--body containing all data displayed on page-->
-    <body>
+  <title>Task Manager</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="js/date.js" defer></script>
+  <script src="js/sidebar.js" defer></script>
+  <script src="js/todo.js" defer></script>
+</head>
+
+<body>
+
+  <div class="app">
+    <!-- TITLE HEADER -->
+    <header id="titleHeader" class="header">
+      <h1>
+        <span class="accentText">Task</span>
+        Manager
+      </h1>
+      <div>
+        <h3 id="weekday">day</h3>
+        <p id="date" class="accentText">date</p>
+      </div>
+    </header>
+
+    <!-- BELOW HEADER -->
+    <div class="body">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <ul>
+          <li class="nav-item" id="dashboard">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="nav-item" id="dailyGoals">
+            <a href="#">Daily Goals</a>
+          </li>
+          <li class="nav-item" id="tasks">
+            <a href="#">Tasks</a>
+          </li>
+          <li class="nav-item" id="projects">
+            <a href="#">Projects</a>
+          </li>
+          <li class="nav-item" id="workout">
+            <a href="#">Workout</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
         <!--header, including page title & input section-->
-        <div id="todoHeader" class="header">
-            <h2>TODO List</h2>
-            <input type="text" id="todoInput" placeholder="Title...">
-            <span onclick="newTodoElement()" class="addBtn">Add</span> 
+        <div id="taskHeader" class="header">
+          <h2>Task List</h2>
+          <input type="text" id="taskInput" placeholder="Title...">
+          <span onclick="newTaskElement()" class="addBtn">Add</span>
         </div>
 
         <!--list that displays TODO items-->
-        <ul id="todoList">
-                <li>Get dressed</li>
-                <li>Eat food</li>
-                <li>Brush teeth</li>
-                <li class="checked">Clean room</li>
-                <li class="checked">Fold laundry</li>
+        <ul id="taskList">
+          <li>Get dressed</li>
+          <li>Eat food</li>
+          <li>Brush teeth</li>
+          <li class="checked">Clean room</li>
+          <li class="checked">Fold laundry</li>
         </ul>
-    </body>
+      </main>
+
+    </div>
+  </div>
+</body>
+
 </html>
