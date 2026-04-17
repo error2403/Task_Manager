@@ -61,6 +61,22 @@ body {
   border-bottom-right-radius: 10px;
 }
 
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-icon {
+  color: var(--secondary-bg-color);
+}
+
+.nav-icon img {
+  width: 20px;
+  height: 20px;
+  color: var(--secondary-bg-color);
+}
+
 .sidebar ul {
   list-style-type: none;
   margin: 0;
