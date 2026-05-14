@@ -1,84 +1,122 @@
 <!doctype html>
 <html lang="en-US">
-<!--where meta data is stored & external references are set-->
+    <!--where meta data is stored & external references are set-->
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Task Manager</title>
-  <link href="css/style.css" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="js/components/date.js" defer></script>
-  <script src="js/components/sidebar.js" defer></script>
-  <script src="js/components/todo.js" defer></script>
-</head>
+        <title>Task Manager</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
-<body>
+        <script src="js/components/date.js" defer></script>
+        <script src="js/components/sidebar.js" defer></script>
+        <script src="js/components/todo.js" defer></script>
+        <script src="js/components/iconFilter.js" defer></script>
+    </head>
 
-  <div class="app">
-    <!-- TITLE HEADER -->
-    <header id="titleHeader" class="header">
-      <h1>
-        <span class="accentText">Task</span>
-        Manager
-      </h1>
-      <div>
-        <h3 id="weekday">day</h3>
-        <p id="date" class="accentText">date</p>
-      </div>
-    </header>
+    <body>
+        <div class="app">
+            <!-- TITLE HEADER -->
+            <header id="titleHeader" class="header">
+                <h1>
+                    <span class="accentText">Task</span>
+                    Manager
+                </h1>
+                <div>
+                    <h3 id="weekday">day</h3>
+                    <p id="date" class="accentText">date</p>
+                </div>
+            </header>
 
-    <!-- BELOW HEADER -->
-    <div class="body">
+            <!-- BELOW HEADER -->
+            <div class="body">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <ul>
+                        <li class="nav-item" id="dashboard">
+                            <span class="nav-icon">
+                                <img
+                                    src="assets/images/dashboard-nav-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <a href="#">Dashboard</a>
+                        </li>
 
-      <!-- Sidebar -->
-      <aside class="sidebar">
+                        <li class="nav-item" id="dailyGoals">
+                            <span class="nav-icon">
+                                <img
+                                    src="assets/images/daily-goals-nav-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <a href="#">Daily Goals</a>
+                        </li>
 
-        <ul>
-          <li class="nav-item" id="dashboard">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="nav-item" id="dailyGoals">
-            <span class="nav-icon">
-              <img src="assets/images/target-and-arrow-svgrepo-com.svg" alt="" aria-hidden="true">
-            </span>
-            <a href="#">Daily Goals</a>
-          </li>
-          <li class="nav-item" id="tasks">
-            <a href="#">Tasks</a>
-          </li>
-          <li class="nav-item" id="projects">
-            <a href="#">Projects</a>
-          </li>
-          <li class="nav-item" id="workout">
-            <a href="#">Workout</a>
-          </li>
-        </ul>
-      </aside>
+                        <li class="nav-item" id="tasks">
+                            <span class="nav-icon">
+                                <img
+                                    src="assets/images/tasks-nav-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <a href="#">Tasks</a>
+                        </li>
 
-      <!-- Main Content -->
-      <main class="main">
-        <!--header, including page title & input section-->
-        <div id="taskHeader" class="header">
-          <h2>Task List</h2>
-          <input type="text" id="taskInput" placeholder="Title...">
-          <span onclick="newTaskElement()" class="addBtn">Add</span>
+                        <li class="nav-item" id="projects">
+                            <span class="nav-icon">
+                                <img
+                                    src="assets/images/projects-nav-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <a href="#">Projects</a>
+                        </li>
+
+                        <li class="nav-item" id="workout">
+                            <span class="nav-icon">
+                                <img
+                                    src="assets/images/workout-nav-icon.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <a href="#">Workout</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="main">
+                    <!--header, including page title & input section-->
+                    <div id="taskHeader" class="header">
+                        <h2>Task List</h2>
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="Title..."
+                        />
+                        <span onclick="newTaskElement()" class="addBtn"
+                            >Add</span
+                        >
+                    </div>
+
+                    <!--list that displays TODO items-->
+                    <ul id="taskList">
+                        <li>Get dressed</li>
+                        <li>Eat food</li>
+                        <li>Brush teeth</li>
+                        <li class="checked">Clean room</li>
+                        <li class="checked">Fold laundry</li>
+                    </ul>
+                </main>
+            </div>
         </div>
-
-        <!--list that displays TODO items-->
-        <ul id="taskList">
-          <li>Get dressed</li>
-          <li>Eat food</li>
-          <li>Brush teeth</li>
-          <li class="checked">Clean room</li>
-          <li class="checked">Fold laundry</li>
-        </ul>
-      </main>
-
-    </div>
-  </div>
-</body>
-
+    </body>
 </html>
