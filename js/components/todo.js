@@ -52,23 +52,7 @@ function renderTasks() {
     });
 }
 
-// initialize: if no tasks in storage, capture any existing DOM list items as defaults
-function initializeTasks() {
-    const tasks = getTasks();
-    if (tasks.length === 0) {
-        const domItems = Array.from(taskListElement.querySelectorAll('li'));
-        if (domItems.length > 0) {
-            const defaultTasks = domItems.map(li => ({
-                text: li.textContent.replace('\u00D7', '').trim(),
-                checked: li.classList.contains('checked')
-            }));
-            saveTasks(defaultTasks);
-        }
-    }
-    renderTasks();
-}
-
-document.addEventListener('DOMContentLoaded', initializeTasks);
+document.addEventListener('DOMContentLoaded', renderTasks);
 
 // Create a new list item when clicking on the "Add" button
 function newTaskElement() {
